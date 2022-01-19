@@ -9,12 +9,12 @@ import Foundation
 
 print("Exercism challenge Swift")
 
-code(for: "Exercism Hello world") {
-  
-func hello(_ name: String? = nil) -> String {
+
+
+public func hello(_ name: String? = nil) -> String {
       return "Hello, \(name ?? "World")!"
 }
-}
+
 
 code(for: "Exercism Lasagna") {
   let expectedMinutesInOven = 40
@@ -92,7 +92,36 @@ print(value.rounded(.up))
 print(floor(value))
 print(value.rounded(.down))*/
 
-code(for: <#T##String#>, sampleCode: <#T##() -> Void#>)
+code(for: "transforming an Int array into String Array") {
+  let arr = [1,2,3,4,5]
+  let strArr = arr.map { String($0) }
+  print(strArr)
+}
+
+code(for: "Capturing values in a closure") {
+  func getNumber() -> (Int) -> Int {
+    var score = 0
+    return { newScore in
+      score += newScore
+      return score
+    }
+  }
+  let operation = getNumber()
+  let x = operation(10)
+  let y = operation(12)
+  let z = operation(8)
+  print(z)
+}
+
+
+code(for: "Struct Protocol") {
+
+}
+
+
+
+
+
 
 
 

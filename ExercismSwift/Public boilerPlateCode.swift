@@ -34,4 +34,10 @@ public func spinWheel() throws -> Int {
 public func randomWord() -> String? {
     Bool.random() ? ["Dog","Cat","Bird"].randomElement() : nil
 }
+public protocol Player {
+  var name: String { get set }
+  var score: Int { get }
+  var secretName: String {get}
+  static var numberOFPlayers :Int {get}
+}
 
